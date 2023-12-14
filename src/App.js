@@ -8,9 +8,15 @@ const App = () => {
   return (
 	  <div className={"app-wrapper"}>
       <Header />
-		  <button color="danger">
+		  <Button color="danger">
 			  <span>Sign Up</span>
-		  </button>
+		  </Button>
+		  <Button color="success">
+			  <span>Sign Up</span>
+		  </Button>
+		  <Button color="primary">
+			  <span>Sign Up</span>
+		  </Button>
 		  {/*<Main>*/}
 			{/*  <div  className="container d-flex flex-column">*/}
 			{/*	  <h1>Visual Design & Development</h1>*/}
