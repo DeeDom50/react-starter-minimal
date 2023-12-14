@@ -1,7 +1,24 @@
-import React from "react";
-import MenuItems from "./components/MenuItems";
+import MenuItem from "./components/MenuItems";
 
 const Header = () => {
+	const menuItems = [
+		{
+			text: "Services",
+			link: "#",
+		},
+		{
+			text: "Work",
+			link: "#",
+		},
+		{
+			text: "Blog",
+			link: "#",
+		},
+		{
+			text: "Contact",
+			link: "#",
+		},
+	];
 	return (
 		<header className="container-fluid">
 			<div className="row">
@@ -10,10 +27,9 @@ const Header = () => {
 				</div>
 				<nav className="col d-flex align-items-center">
 					<ul className="d-flex list-unstyled align-items-center gap-3">
-						<MenuItems text="Services" />
-						<MenuItems text="Work" />
-						<MenuItems text="Blog" />
-						<MenuItems text="Contact" />
+						{menuItems.map((menuItem) => (
+							<MenuItem text={menuItem.text} link={menuItem.link} />
+						))}
 					</ul>
 				</nav>
 			</div>
