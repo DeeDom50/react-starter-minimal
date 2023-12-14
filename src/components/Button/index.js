@@ -5,7 +5,9 @@ const Button = (props) => {
 		alert(`You have clicked a button of the ${props.color} `);
 	};
 	return (
-		<button onClick={handleButtonClick} className={`btn ${ghost}-${color} d-flex align-items-center gap-3 justify-content-center`}>
+		<button
+			onClick={props.action}
+			className={`btn ${ghost}-${color} d-flex align-items-center gap-3 justify-content-center`}>
 			{props.children}
 		</button>
 	);
